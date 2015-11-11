@@ -14,9 +14,10 @@
         $.ajax({
           url: "play",
           type: "POST",
-          data: {
+          contentType : 'application/json',
+          data: JSON.stringify({
             ip: ip
-          }
+          })
         });
         return false;
       });
