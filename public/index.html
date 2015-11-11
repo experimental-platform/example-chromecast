@@ -10,7 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script>
       $("button").click(function() {
-        var ip = confirm("Please enter the ip address of your chromecast:");
+        var ip = prompt("Please enter the ip address of your chromecast:", "");
         $.ajax({
           url: "play",
           type: "POST",
