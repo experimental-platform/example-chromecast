@@ -7,11 +7,11 @@ app.use(express.static(__dirname + '/public'));
 
 app.post("/play", function(req, res) {
   // Also supports youtube urls
-  var spawn = spawn(require.resolve("castnow"), ["./public/kitty.mp4"]);
-  spawn.stdout.on("data", function(data) {
+  var castnow = spawn(require.resolve("castnow"), ["./public/kitty.mp4"]);
+  castnow.stdout.on("data", function(data) {
     console.log("stdout:", data);
   });
-  spawn.stderr.on("data", function(data) {
+  castnow.stderr.on("data", function(data) {
     console.log("stderr:", data);
   });
   res.send("playing!");
