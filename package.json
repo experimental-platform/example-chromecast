@@ -1,12 +1,13 @@
 {
-  "name": "node-js-sample",
-  "version": "0.2.0",
-  "description": "A sample Node.js app using Express 4",
+  "name": "experimental-platform-example-chromecast",
+  "version": "0.1.0",
+  "description": "A sample Experimental Platform App using Chromecast",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
+    "castnow": "^0.4.13",
     "express": "^4.0.0"
   },
   "engines": {
@@ -14,16 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-sample"
+    "url": "https://github.com/experimental-platform/example-chromecast"
   },
   "keywords": [
     "node",
     "heroku",
     "express"
-  ],
-  "author": "Mark Pundsack",
-  "contributors": [
-    "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com)"
   ],
   "license": "MIT"
 }
