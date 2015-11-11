@@ -6,8 +6,8 @@ app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
 app.post("/play", function(req, res) {
-  // Also supports youtube urls
-  var castnow = spawn(require.resolve("castnow"), ["./public/kitty.mp4"]);
+  // Please enter the ip of your chromecast below
+  var castnow = spawn(require.resolve("castnow"), ["--address", req.body.ip, "./public/kitty.mp4"]);
   castnow.stdout.on("data", function(data) {
     console.log("stdout:", data.toString());
   });
