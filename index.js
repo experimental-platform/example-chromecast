@@ -1,9 +1,11 @@
 var express = require('express');
 var app = express();
 var spawn = require("child_process").spawn;
+var bodyParser = require('body-parser');
 
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.json()); 
 
 app.post("/play", function(req, res) {
   // Please enter the ip of your chromecast below
