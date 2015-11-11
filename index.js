@@ -9,10 +9,10 @@ app.post("/play", function(req, res) {
   // Also supports youtube urls
   var castnow = spawn(require.resolve("castnow"), ["./public/kitty.mp4"]);
   castnow.stdout.on("data", function(data) {
-    console.log("stdout:", data);
+    console.log("stdout:", data.toString());
   });
   castnow.stderr.on("data", function(data) {
-    console.log("stderr:", data);
+    console.log("stderr:", data.toString());
   });
   res.send("playing!");
 });
