@@ -8,8 +8,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json()); 
 
 app.post("/play", function(req, res) {
-  // Please enter the ip of your chromecast below
-  console.log(req.body.ip)
+  // You can also pass a youtube url instead of a local file uri
   var castnow = spawn(require.resolve("castnow"), ["--address", req.body.ip, "./public/kitty.mp4"]);
   castnow.stdout.on("data", function(data) {
     console.log("stdout:", data.toString());
