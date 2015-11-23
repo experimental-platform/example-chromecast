@@ -9,7 +9,7 @@
 
 ## Installation
 
-    git clone git@github.com:experimental-platform/example-chromecast.git
+    git clone https://github.com/experimental-platform/example-chromecast.git
     cd example-chromecast
     git remote add platform ssh://dokku@your-box.local:8022/example-chromecast
     git push platform master
