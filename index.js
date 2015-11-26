@@ -66,7 +66,7 @@ app.post("/play", function(req, res) {
   http.get(options, function(res) {
     res.on('data', function(data) {
       var ip = data.toString();
-      var appname = process.env.APPNAME;
+      var appname = process.env.APP_NAME;
       var media = 'http://' + ip + '/' + appname + '/file/kitty.mp4';
       var params = {};
       params.media = {
