@@ -1,6 +1,6 @@
 # Chromecast Example for Experimental Platform
 
-[The node.js code](https://github.com/experimental-platform/example-chromecast/blob/master/index.js) has only a few lines and is easy to understand. It uses [castnow](https://github.com/xat/castnow) to stream an mp4 file to a Chromecast.
+[The node.js code](https://github.com/experimental-platform/example-chromecast/blob/master/index.js) has only a few lines and is easy to understand. It uses [chromecast-player](https://github.com/xat/chromecast-player) to stream an mp4 file to a Chromecast.
 
 ## Requirements
 
