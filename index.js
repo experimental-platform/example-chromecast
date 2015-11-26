@@ -60,7 +60,7 @@ var playerDebug = function(err, p, ctx) {
 app.post("/play", function(req, res) {
   var options = {
     socketPath: '/hardware/hardware.sock',
-    path: '/lanip'
+    path: '/v1/network/default/ip'
   };
 
   http.get(options, function(res) {
